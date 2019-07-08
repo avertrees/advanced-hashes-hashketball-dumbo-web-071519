@@ -360,10 +360,10 @@ def most_steals
   playersName = ""
   
   all_stats.each do |players|
-    puts players
+    #puts players
     players.each do |name, val|
-      puts val
-      puts val[:steals]
+      #puts val
+      #puts val[:steals]
       if val[:steals] > maxSteals
         playersName = name
         #puts val[:steals]
