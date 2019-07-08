@@ -278,7 +278,7 @@ def all_stats
   stats = homeStats + awayStats
   #stats << homeStats
   #stats << awayStats
-  puts stats
+  #puts stats
   return stats
 end
 
