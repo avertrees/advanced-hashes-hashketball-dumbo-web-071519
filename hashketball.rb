@@ -275,8 +275,9 @@ def all_stats
   stats = []
   homeStats = team_stats(:home)
   awayStats = team_stats(:away)
-  stats << homeStats
-  stats << awayStats
+  stats = homeStats + awayStats
+  #stats << homeStats
+  #stats << awayStats
   puts stats
   return stats
 end
