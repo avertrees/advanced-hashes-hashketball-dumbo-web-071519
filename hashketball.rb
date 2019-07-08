@@ -366,10 +366,10 @@ def most_steals
       puts val
       #puts val[:steals]
       if val[:steals] > maxSteals
+        maxSteals = val[:steals]
         puts val[:steals]
         playersName = name
         #puts val[:steals]
-        
       else 
         maxSteals = maxSteals
       end
