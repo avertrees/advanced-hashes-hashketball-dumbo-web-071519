@@ -276,9 +276,6 @@ def all_stats
   homeStats = team_stats(:home)
   awayStats = team_stats(:away)
   stats = homeStats + awayStats
-  #stats << homeStats
-  #stats << awayStats
-  #puts stats
   return stats
 end
 
@@ -288,17 +285,10 @@ def team_stats(loc)
       team_data.each do |attribute, data|
         if attribute == :players 
           return data
-          # data.each do |players|
-          #   players.each do |name, val|
-          #     players << name
-          #   end
-          # end
         end
       end
     end
   end  
-  #puts players
-  #return players
 end
 
 def winning_team
@@ -358,16 +348,11 @@ end
 def most_steals 
   maxSteals = 0
   playersName = ""
-  
   all_stats.each do |players|
-    #puts players
     players.each do |name, val|
-      puts name
-      puts val
       #puts val[:steals]
       if val[:steals] > maxSteals
         maxSteals = val[:steals]
-        puts val[:steals]
         playersName = name
         #puts val[:steals]
       else 
@@ -381,9 +366,6 @@ end
 def long_name_steals_a_ton?
   name = player_with_longest_name
   steals = most_steals
-  #puts name
-  #puts steals
   val = name == steals ? true : false
-  #puts val
   return val
 end
