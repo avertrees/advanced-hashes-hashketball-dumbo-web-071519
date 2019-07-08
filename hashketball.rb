@@ -364,8 +364,9 @@ def most_steals
     players.each do |name, val|
       puts name
       puts val
-      puts val[:steals]
+      #puts val[:steals]
       if val[:steals] > maxSteals
+        puts val[:steals]
         playersName = name
         #puts val[:steals]
         
